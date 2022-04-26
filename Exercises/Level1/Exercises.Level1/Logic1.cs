@@ -18,8 +18,32 @@ public class Logic1
     /// cigarParty(70, true) → true
     /// </summary>
     public bool CigarParty(int cigars, bool isWeekend)
+
+
     {
-        throw new NotImplementedException();
+       //isais variants
+       //if (cigars >= 40 && (isWeekend || cigars <= 60))
+       // { 
+       // return true;
+       // }
+
+        // garais variants
+        // 1.Ja ciagru skaits ir mazaks par 40 tad ballite nav izdevusies
+        if (cigars < 40)
+        { 
+        return false;
+        }
+        // 2. ja ir brivdienas tad vienmer iz izdevusies
+        if (isWeekend)
+        { 
+        return true;
+        }
+        // 3. ja nav brivdiena tad cigaru skaitam ir jabut mazakam par 60
+        if (cigars <= 60)
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
@@ -36,7 +60,19 @@ public class Logic1
     /// </summary>
     public int DateFashion(int you, int date)
     {
-        throw new NotImplementedException();
+        //ja kaut viens ir divi vai mazak tad 0
+        if (you <= 2 || date <= 2)
+        {
+            return 0;
+        }
+        //ja kaut viens ir 8 vai vairak tad 2
+        if (you >= 8 || date >= 8)
+        {
+            return 2;
+        }
+        //citadi 1
+
+        return 1;
     }
 
     /// <summary>
@@ -51,7 +87,43 @@ public class Logic1
     /// </summary>
     public bool SquirrelPlay(int temp, bool isSummer)
     {
-        throw new NotImplementedException();
+        //int higherTemp = 90;
+        //if (isSummer) { higherTemp += 10}
+       
+        
+        
+        //if (temp < 60)
+        //{
+        //    return false;
+        //}
+        //1. Ja temp ir starp 60 un 90 un nav vasara tad atgriezam true
+        if (temp >= 60 && temp <= 90 && !isSummer)
+        { 
+            return true; 
+        }
+        //2. ja temp ir starp 600 un 100 un ir vasara tad atgriezam true
+        if (temp >= 60 && temp <= 100 && isSummer)
+        {
+            return true;
+        }
+        //3. citadi atgriez vertibu false
+
+        //max isais no 
+        //int higherTemp = 90;
+
+        //if (isSummer)
+        //{
+        //    higherTemp += 10;
+        //}
+
+        //if (temp >= 60 && temp <= higherTemp)
+        //{
+        //    return true;
+        //}
+
+        //return false;
+
+        return false;
     }
 
     /// <summary>
