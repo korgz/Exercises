@@ -144,17 +144,31 @@ public class Logic1
         //    int speed +5;
         //}
 
-        if (speed >= 61 && speed <= 80 && !isBirthday || speed >= 66 && speed <= 85 && isBirthday)
+        if (isBirthday)
         {
-            return 1;
+            speed -= 5;
         }
-        //3. Ja atrums ir 81 un atrak return 2;
-
-        if (speed >= 81 && !isBirthday)
+        if (speed <= 60)
+            return 0;
+        if (speed >= 81)
         {
             return 2;
+
+
         }
-        return 0;
+        return 1;
+
+        //if (speed >= 61 && speed <= 80 && !isBirthday || speed >= 66 && speed <= 85 && isBirthday)
+        //{
+        //    return 1;
+        //}
+        ////3. Ja atrums ir 81 un atrak return 2;
+
+        //if (speed >= 81 && !isBirthday)
+        //{
+        //    return 2;
+        //}
+        //return 0;
     }
 
     /// <summary>
@@ -167,12 +181,14 @@ public class Logic1
     /// </summary>
     public int SortaSum(int a, int b)
     {
-        if (a + b >= 10 && a + b <= 19) ;
+        int sum = a + b;
+
+        if (a + b >= 10 && a + b <= 19)
         {
             return 20;
-        }
+        }  
         
-        return a + b;
+        return sum;
 
     }
 
@@ -189,7 +205,27 @@ public class Logic1
     /// </summary>
     public string AlarmClock(int day, bool vacation)
     {
-        throw new NotImplementedException();
+        string early = "7:00";
+        string late = "10:00";
+        string off = "off";
+        if (day == 0 || day == 6)
+        {
+            if (vacation)
+            {
+                return off;
+            }
+            return late;
+
+        }
+        
+
+        if (vacation)
+        {
+            return late;
+        }
+
+        return early;
+            
     }
 
     /// <summary>
@@ -203,7 +239,21 @@ public class Logic1
     /// </summary>
     public bool Love6(int a, int b)
     {
-        throw new NotImplementedException();
+        if (a == 6 || b == 6)
+        { 
+        return true;
+        }
+        if (a + b == 6)
+        {
+            return true;
+        }
+        int subtracted = a - b;
+        int diff = Math.Abs(subtracted);
+        if (diff == 6)
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
