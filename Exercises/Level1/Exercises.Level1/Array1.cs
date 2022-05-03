@@ -19,7 +19,11 @@ public class Array1
     /// </summary>
     public bool FirstLast6(int[] nums)
     {
-        throw new NotImplementedException();
+        int first = nums[0];
+        int lastIndex = nums.Length - 1;
+        int last = nums[lastIndex];
+
+        return first == 6 || last == 6;
     }
 
     /// <summary>
@@ -32,7 +36,24 @@ public class Array1
     /// </summary>
     public bool SameFirstLast(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length == 0)
+        {
+            return false;
+        }
+        int firstElement = nums[0];
+        int lastIndex = nums.Length - 1;
+        int lastElement = nums[lastIndex];
+
+        return firstElement == lastElement;
+
+        //ja masiva elementu skaits ir mazaks vai ienads ar 1 tad argriezam vertibu false
+
+
+        //if (nums.Length == 0)
+        //{ 
+        //return false;
+        //}
+        //ja masiva pirma un pedeja vertiba 
     }
 
     /// <summary>
@@ -42,7 +63,7 @@ public class Array1
     /// </summary>
     public int[] MakePi()
     {
-        throw new NotImplementedException();
+        return new int[] { 3, 1, 4 };
     }
 
     /// <summary>
@@ -55,8 +76,27 @@ public class Array1
     /// </summary>
     public bool CommonEnd(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        int aFirstElement = a[0];
+        int bFirstElement = b[0];
+
+        if (aFirstElement == bFirstElement)
+        {
+            return true;
+        }
+
+        int aLastIndex = a.Length - 1;
+        int bLastIndex = b.Length - 1;
+
+        int aLastElement = a[aLastIndex];
+        int bLastElement = b[bLastIndex];
+
+        return aLastElement == bLastElement;
     }
+    //public bool CommonEnd(int[] a, int[] b)
+    //{
+    //    return a[0] == b[0] || a[a.Length - 1] == b[b.Length - 1];
+    //}
+
 
     /// <summary>
     /// Given an array of ints length 3, return the sum of all the elements.
@@ -66,8 +106,14 @@ public class Array1
     /// sum3([7, 0, 0]) → 7
     /// </summary>
     public int Sum3(int[] nums)
+
     {
-        throw new NotImplementedException();
+        int sum = 0;
+        foreach (var num in nums)
+        {
+            sum = sum + num;
+        }
+        return sum;
     }
 
     /// <summary>
@@ -80,7 +126,17 @@ public class Array1
     /// </summary>
     public int[] RotateLeft3(int[] nums)
     {
-        throw new NotImplementedException();
+        int num_1 = nums[0];
+        int num_2 = nums[1];
+        int num_3 = nums[2];
+
+        int[] newNums = new int[nums.Length];
+
+        newNums[0] = num_2;
+        newNums[1] = num_3;
+        newNums[2] = num_1;
+    
+    return newNums;
     }
 
     /// <summary>
