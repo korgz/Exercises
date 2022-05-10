@@ -180,11 +180,12 @@ public class Array1
         int first = nums[0];
         int last =  nums[nums.Length - 1];
         int biggest = first;
+
         if (first < last)
         {
             biggest = last;
         }
-
+      
         for (int i = 0; i < nums.Length; i++)
         {
             nums[i] = biggest;    
@@ -218,7 +219,26 @@ public class Array1
     /// </summary>
     public int Sum2(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length >= 2)
+        {
+            return nums[0] + nums[1];
+        }
+        if (nums.Length == 1)
+        {
+            return nums[0];
+        }
+
+            return 0;
+
+
+        //int sum = 0;
+        //foreach (var num in nums)
+        //{
+        //    sum = sum + num;
+        //}
+        //return sum;
+
+        //return 0;
     }
 
     /// <summary>
