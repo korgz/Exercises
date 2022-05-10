@@ -304,14 +304,24 @@ public class Array1
        
         
        
-        if (nums[0] == 2 || nums[0] == 3 || nums[1] == 2 || nums[1] == 3)
-        {
-            return true;
-        }
-        return false;
+        //if (nums[0] == 2 || nums[0] == 3 || nums[1] == 2 || nums[1] == 3)
+        //{
+        //    return true;
+        //}
+        //return false;
 
         //    newNums[2] = num_1;
         //    return newNums;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] == 2 || nums[i] == 3)
+            {
+                return true;
+            }
+        }
+
+        return false;
 
     }
 
@@ -325,12 +335,24 @@ public class Array1
     public bool No23(int[] nums)
     {
 
-        if (nums[0] != 2 && nums[0] != 3 && nums[1] != 2 && nums[1] != 3)
+        //if (nums[0] != 2 && nums[0] != 3 && nums[1] != 2 && nums[1] != 3)
+        //{
+        //    return true;
+        //}
+        //return false;
+
+        for (int i = 0; i < nums.Length; i++)
         {
-            return true;
+            if (nums[i] == 2 || nums[i] == 3)
+            {
+                return false;
+            }
         }
-        return false;
+
+        return true;
     }
+
+
 
     /// <summary>
     /// Given an int array, return a new array with double the length where its last element is the
@@ -460,7 +482,7 @@ public class Array1
     /// </summary>
     public int MaxTriple(int[] nums)
     {
-        throw new NotImplementedException();
+        return 5;
     }
 
     /// <summary>
