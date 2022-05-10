@@ -154,7 +154,17 @@ public class Array1
     /// </summary>
     public int[] Reverse3(int[] nums)
     {
-        throw new NotImplementedException();
+        int num_1 = nums[0];
+        int num_2 = nums[1];
+        int num_3 = nums[2];
+
+        int[] newNums = new int[nums.Length];
+
+        newNums[0] = num_3;
+        newNums[1] = num_2;
+        newNums[2] = num_1;
+
+        return newNums;
     }
 
     /// <summary>
@@ -167,8 +177,35 @@ public class Array1
     /// </summary>
     public int[] MaxEnd3(int[] nums)
     {
-        throw new NotImplementedException();
+        int first = nums[0];
+        int last =  nums[nums.Length - 1];
+        int biggest = first;
+        if (first < last)
+        {
+            biggest = last;
+        }
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            nums[i] = biggest;    
+        }
+
+        return nums;
+       
     }
+    //{
+    //    int num_1 = nums[0];
+    //    int num_2 = nums[1];
+    //    int num_3 = nums[2];
+
+    //    int[] newNums = new int[nums.Length];
+
+    //    newNums[0] = num_3;
+    //    newNums[1] = num_2;
+    //    newNums[2] = num_1;
+
+    //    return newNums;
+    //}
 
     /// <summary>
     /// Given an array of ints, return the sum of the first 2 elements in the array. If the array
