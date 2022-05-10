@@ -251,7 +251,21 @@ public class Array1
     /// </summary>
     public int[] MiddleWay(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+
+        return new int[] { a[1], b[1] };
+
+//        int new_nums[] = { a[1], b[1] }
+//return new_nums;
+
+
+        //int nums = nums[1];
+        //int nums2 = nums2[1];
+
+        //return { nums}, { nums2}
+
+
+        //int last = nums[nums.Length - 1];
+
     }
 
     /// <summary>
@@ -264,7 +278,11 @@ public class Array1
     /// </summary>
     public int[] MakeEnds(int[] nums)
     {
-        throw new NotImplementedException();
+        //int first = nums[0];
+        //int last = nums[nums.Length - 1];
+        //return new int[] { first, last };
+
+        return new int[] { nums[0], nums[nums.Length - 1] };
     }
 
     /// <summary>
