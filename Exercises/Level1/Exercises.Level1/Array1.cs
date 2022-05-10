@@ -294,7 +294,25 @@ public class Array1
     /// </summary>
     public bool Has23(int[] nums)
     {
-        throw new NotImplementedException();
+        //if (nums.Contains(2) || nums.Contains(3))
+        //{
+        //    return true;
+        //}
+        //return false;
+
+        //return nums.Any(i => i >= 4 && i <= 7);
+       
+        
+       
+        if (nums[0] == 2 || nums[0] == 3 || nums[1] == 2 || nums[1] == 3)
+        {
+            return true;
+        }
+        return false;
+
+        //    newNums[2] = num_1;
+        //    return newNums;
+
     }
 
     /// <summary>
@@ -306,7 +324,12 @@ public class Array1
     /// </summary>
     public bool No23(int[] nums)
     {
-        throw new NotImplementedException();
+
+        if (nums[0] != 2 && nums[0] != 3 && nums[1] != 2 && nums[1] != 3)
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
