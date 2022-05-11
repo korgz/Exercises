@@ -365,7 +365,17 @@ public class Array1
     /// </summary>
     public int[] MakeLast(int[] nums)
     {
-        throw new NotImplementedException();
+        //create new array, *2
+        int[] new_nums = new int [nums.Length * 2];
+        //for checks each element in array
+        for (int i = 0; i < new_nums.Length; i++)
+        {   //assignes for in each check value of 0
+            new_nums[i] = 0;
+        }
+        //new array last element = with old array last.
+        new_nums[new_nums.Length - 1] = nums[nums.Length - 1];
+
+        return new_nums;
     }
 
     /// <summary>
