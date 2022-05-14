@@ -442,16 +442,25 @@ public class Array1
 
         return nums;
     }
+//    for (int i = 0; i<nums.Length; i++) {
+//    if (i != 0) {
+//        if (nums[i - 1] == 2  && nums[i] == 2) {
+//            nums[i] = 0;
+//        }
+//    }
+//}
 
-    /// <summary>
-    /// Start with 2 int arrays, a and b, of any length. Return how many of the arrays have 1 as
-    /// their first element.
-    /// 
-    /// start1([1, 2, 3], [1, 3]) → 2
-    /// start1([7, 2, 3], [1]) → 1
-    /// start1([1, 2], []) → 1
-    /// </summary>
-    public int Start1(int[] a, int[] b)
+//return nums;
+
+/// <summary>
+/// Start with 2 int arrays, a and b, of any length. Return how many of the arrays have 1 as
+/// their first element.
+/// 
+/// start1([1, 2, 3], [1, 3]) → 2
+/// start1([7, 2, 3], [1]) → 1
+/// start1([1, 2], []) → 1
+/// </summary>
+public int Start1(int[] a, int[] b)
     {
         throw new NotImplementedException();
     }
