@@ -388,7 +388,30 @@ public class Array1
     /// </summary>
     public bool Double23(int[] nums)
     {
-        throw new NotImplementedException();
+        int nums1 = 0;
+        int nums2 = 0;
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] == 2)
+            {
+                nums1++;
+                
+            }
+
+            if (nums[i] == 3)
+            {
+                nums2++;
+              
+            }
+          
+            
+        }
+        if (nums1 == 2 || nums2 == 2)
+        {
+            return true;
+
+        }
+        return false;
     }
 
     /// <summary>
@@ -401,7 +424,23 @@ public class Array1
     /// </summary>
     public int[] Fix23(int[] nums)
     {
-        throw new NotImplementedException();
+        int previous = 0;
+        int current = 0;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            previous = current;
+            current = nums[i];
+
+
+            if (current == 3 && previous == 2)
+            {
+
+                nums[i] = 0;
+            }
+        }
+
+        return nums;
     }
 
     /// <summary>
