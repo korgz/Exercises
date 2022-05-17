@@ -40,7 +40,21 @@ public class Array2
     /// </summary>
     public int BigDiff(int[] nums)
     {
-        throw new NotImplementedException();
+        int largest = int.MinValue;
+        int smallest = int.MaxValue;
+        foreach (int num in nums)
+        {
+            if (largest < num)
+            {
+                largest = num;
+            }
+            if (smallest > num)
+            {
+                smallest = num;
+            }
+
+        }
+        return largest - smallest;
     }
 
     /// <summary>
@@ -56,7 +70,26 @@ public class Array2
     /// </summary>
     public int CenteredAverage(int[] nums)
     {
-        throw new NotImplementedException();
+        int count = 0;
+        foreach (int num in nums)
+        {
+            count += num;
+        }
+        int largest = int.MinValue;
+        int smallest = int.MaxValue;
+        foreach (int num in nums)
+        {
+            if (largest < num)
+            {
+                largest = num;
+            }
+            if (smallest > num)
+            {
+                smallest = num;
+            }
+        }
+        return (count - largest - smallest) / (nums.Length - 2);
+
     }
 
     /// <summary>
